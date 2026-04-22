@@ -4,7 +4,42 @@
 <meta charset="UTF-8">
 <title>Lost City</title>
 
-<style>
+<style>.icon-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ديسكورد */
+.discord {
+  background: linear-gradient(135deg, #5865F2, #7b83ff);
+  box-shadow: 0 0 25px rgba(88,101,242,0.6);
+}
+
+.discord:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(88,101,242,0.9);
+}
+
+/* تيك توك */
+.tiktok {
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  border: 1px solid #ff2d55;
+  box-shadow: 0 0 25px rgba(255,45,85,0.4);
+}
+
+.tiktok:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255,45,85,0.8);
+}
 body {
   margin: 0;
   font-family: Arial;
@@ -176,16 +211,14 @@ p {
     <a class="btn" href="founders.html">المؤسسين</a>
   </div>
 
-  <!-- ديسكورد -->
-  <a class="discord" href="https://discord.gg/dZSnqcRQCp" target="_blank">
-  🎮 انضم للديسكورد
+<!-- ديسكورد -->
+<a class="icon-btn discord" href="https://discord.gg/dZSnqcRQCp" target="_blank">
+  <i class="fa-brands fa-discord"></i>
 </a>
-</a>
-  </a>
 
-  <!-- تيك توك -->
-<a class="tiktok" href="https://www.tiktok.com/@lc9721" target="_blank">
-  🎵 تابعنا TikTok
+<!-- تيك توك -->
+<a class="icon-btn tiktok" href="https://www.tiktok.com/@lc9721" target="_blank">
+  <i class="fa-brands fa-tiktok"></i>
 </a>
  
   </a>
