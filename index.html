@@ -8,22 +8,34 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #07070a;
+  background: radial-gradient(circle at top, #2b0a3d, #07070a);
   color: white;
   overflow: hidden;
 }
 
-/* LC الكبير */
+/* تأثير ضوء بنفسجي بالخلف */
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #9d4edd;
+  filter: blur(200px);
+  opacity: 0.25;
+  top: -100px;
+  left: -100px;
+}
+
+/* LC */
 .lc {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 200px;
+  font-size: 220px;
   font-weight: 900;
-  color: rgba(157,78,221,0.12);
-  letter-spacing: 20px;
-  text-shadow: 0 0 60px rgba(157,78,221,0.2);
+  color: rgba(199,125,255,0.12);
+  letter-spacing: 25px;
+  text-shadow: 0 0 80px rgba(157,78,221,0.3);
   pointer-events: none;
 }
 
@@ -36,20 +48,20 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .building {
   width: 60px;
-  background: #1a1a1a;
-  border: 1px solid #222;
-  box-shadow: 0 0 20px #9d4edd33;
+  background: linear-gradient(to top, #1a1a1a, #2b0a3d);
+  border: 1px solid #3a0a55;
+  box-shadow: 0 0 30px rgba(157,78,221,0.2);
 }
 
 .b1 { height: 120px; }
 .b2 { height: 180px; }
 .b3 { height: 90px; }
-.b4 { height: 200px; }
+.b4 { height: 220px; }
 .b5 { height: 150px; }
 
 /* المحتوى */
@@ -60,20 +72,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 65px;
   color: #c77dff;
-  text-shadow: 0 0 20px #9d4edd;
+  text-shadow: 0 0 25px #9d4edd;
   margin: 0;
 }
 
 p {
-  color: #aaa;
+  color: #bbb;
 }
 
-/* الأزرار */
+/* أزرار */
 .btns {
   display: flex;
   gap: 20px;
@@ -92,10 +105,11 @@ p {
 
 .btn:hover {
   background: #9d4edd;
-  box-shadow: 0 0 20px #9d4edd;
+  box-shadow: 0 0 25px #9d4edd;
+  transform: translateY(-2px);
 }
 
-/* زر الديسكورد */
+/* ديسكورد */
 .discord {
   margin-top: 25px;
   padding: 14px 30px;
@@ -105,18 +119,39 @@ p {
   background: #5865F2;
   font-weight: bold;
   transition: 0.3s;
-  box-shadow: 0 0 20px rgba(88,101,242,0.5);
+  box-shadow: 0 0 25px rgba(88,101,242,0.6);
 }
 
 .discord:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(88,101,242,0.8);
+  box-shadow: 0 0 35px rgba(88,101,242,0.9);
+}
+
+/* تيك توك */
+.tiktok {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  background: black;
+  border: 1px solid #c77dff;
+  box-shadow: 0 0 20px rgba(199,125,255,0.3);
+  transition: 0.3s;
+}
+
+.tiktok:hover {
+  box-shadow: 0 0 30px rgba(199,125,255,0.6);
+  transform: scale(1.05);
 }
 </style>
 
 </head>
 
 <body>
+
+<!-- ضوء بنفسجي -->
+<div class="glow"></div>
 
 <!-- LC -->
 <div class="lc">LC</div>
@@ -144,6 +179,11 @@ p {
   <!-- ديسكورد -->
   <a class="discord" href="https://discord.gg/dZSnqcRQCp" target="_blank">
     دخول الديسكورد
+  </a>
+
+  <!-- تيك توك -->
+  <a class="tiktok" href="https://www.tiktok.com/@lc9721" target="_blank">
+    .lc9721
   </a>
 
 </div>
