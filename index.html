@@ -8,42 +8,67 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #0f0f0f;
+  background: #0b0b0f;
   color: white;
-  text-align: center;
+  overflow: hidden;
 }
 
-header {
-  padding: 20px;
-  background: #1a1a1a;
-  font-size: 28px;
-  font-weight: bold;
+/* كلمة الخلفية الكبيرة */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 140px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  color: rgba(157,78,221,0.15);
+  text-shadow: 0 0 40px rgba(157,78,221,0.2);
+  pointer-events: none;
 }
 
-.container {
-  height: 80vh;
+/* المحتوى */
+.content {
+  position: relative;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* العنوان الأساسي */
+h1 {
+  font-size: 60px;
+  color: #c77dff;
+  text-shadow: 0 0 20px #9d4edd;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* الأزرار */
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
 .btn {
-  display: block;
-  width: 200px;
-  margin: 10px;
-  padding: 12px;
-  background: #222;
-  border: 1px solid #555;
-  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
   text-decoration: none;
-  border-radius: 10px;
+  color: white;
+  border: 1px solid #9d4edd;
   transition: 0.3s;
+  background: rgba(255,255,255,0.05);
 }
 
 .btn:hover {
-  background: white;
-  color: black;
+  background: #9d4edd;
+  box-shadow: 0 0 20px #9d4edd;
 }
 </style>
 
@@ -51,15 +76,18 @@ header {
 
 <body>
 
-<header>
-  Lost City
-</header>
+<!-- خلفية النص الكبير -->
+<div class="bg-text">LOST CITY</div>
 
-<div class="container">
+<div class="content">
 
-  <a class="btn" href="index.html">الرئيسية</a>
-  <a class="btn" href="rules.html">القوانين</a>
-  <a class="btn" href="founders.html">المؤسسين</a>
+  <h1>Lost City</h1>
+  <p>سيرفر رول بلاي احترافي</p>
+
+  <div class="btns">
+    <a class="btn" href="rules.html">القوانين</a>
+    <a class="btn" href="founders.html">المؤسسين</a>
+  </div>
 
 </div>
 
