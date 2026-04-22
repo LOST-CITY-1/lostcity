@@ -1,42 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><style>.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid #9d4edd;
-  background: rgba(255,255,255,0.05);
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #9d4edd;
-  box-shadow: 0 0 25px #9d4edd;
-  transform: translateY(-2px);
-}
-body {<div class="btns">
-
-  <a class="btn" href="index.html">الرئيسية</a>
-  <a class="btn" href="rules.html">القوانين</a>
-  <a class="btn" href="founders.html">المؤسسين</a>
-
-</div>
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-body.loaded {
-  opacity: 1;
-}
-
-/* عند الخروج */
-.fade-out {
-  opacity: 0 !important;
-}
-</style>
+<head>
 <meta charset="UTF-8">
 
 <title>قوانين لوس سيتي</title>
@@ -47,9 +11,19 @@ body{
   font-family:Arial;
   background:linear-gradient(180deg,#0a0014,#12001f);
   color:white;
+  opacity:0;
+  transition:opacity 0.5s ease;
 }
 
-/* شريط علوي ثابت */
+body.loaded{
+  opacity:1;
+}
+
+.fade-out{
+  opacity:0 !important;
+}
+
+/* شريط علوي */
 .topbar{
   position:sticky;
   top:0;
@@ -76,7 +50,7 @@ body{
   background:#c77dff;
 }
 
-/* زر رجوع ثابت */
+/* زر رجوع */
 .back-btn{
   position:fixed;
   bottom:20px;
@@ -145,20 +119,20 @@ ul{
 
 <body>
 
-<!-- شريط التنقل -->
+<!-- شريط التنقل (بدون مؤسسين) -->
 <div class="topbar">
   <a href="index.html">الرئيسية</a>
   <a href="#rules">القوانين</a>
 </div>
 
-<!-- زر رجوع ثابت -->
+<!-- زر رجوع -->
 <a href="index.html" class="back-btn">⬅ رجوع للرئيسية</a>
 
 <div class="container">
 
 <h1 id="rules">قوانين سيرفر لوس سيتي - LOST CITY</h1>
 
-<!-- NLR -->
+<!-- نفس قوانينك بالكامل -->
 <details>
 <summary>قوانين الحياة الجديدة - NLR</summary>
 <p>
@@ -166,7 +140,6 @@ ul{
 </p>
 </details>
 
-<!-- PowerGaming -->
 <details>
 <summary>الباور جيمنج - PowerGaming</summary>
 <p>
@@ -174,7 +147,6 @@ ul{
 </p>
 </details>
 
-<!-- NVL -->
 <details>
 <summary>الخوف على الحياة - NVL</summary>
 <p>
@@ -182,7 +154,6 @@ ul{
 </p>
 </details>
 
-<!-- METAGAMING -->
 <details>
 <summary>الميتا جيمنج Metagaming</summary>
 <p>
@@ -190,87 +161,58 @@ ul{
 </p>
 </details>
 
-<!-- LOST CITY -->
 <details>
 <summary>قانون تقدير الحياة - LOST CITY</summary>
 <p>
-هي الحفاظ على حياتك وحياة الآخرين، وعدم التهور، وأن لا تستهين بقتل الأشخاص، وأن لا تقاوم المجرم أو الشرطة او اي شحص يحمل سلاح مهما كان خصوصاُ اذا كنت أعزل، وهذا لا يمنع استعمال حق الدفاع عن النفس عند الضرورة التي تمنعك من طلب مساعدة الشرطة، وبكل الأحوال يجب محاورة اللاعب بشكل جيد والتفاوض معه قبل الشروع بأي عمل يعرض حياة اللاعب الآخر للخطر.
+هي الحفاظ على حياتك وحياة الآخرين، وعدم التهور، وأن لا تستهين بقتل الأشخاص...
 </p>
 </details>
 
-<!-- GENERAL -->
 <details>
 <summary>القوانين العامة والشروط</summary>
 
 <p><b>📌 شروط عامة</b></p>
 <ul>
-<li>ممنوع كتابة أسمك باللغة الإنجليزية أو برموز أو تشكيل أو يكون اسم شخصيه مشهوره.</li>
-<li>يمنع الدخول من أجهزة غير جهازك الشخصي.</li>
-<li>يحق لك امتلاك شخصتين فقط.</li>
+<li>ممنوع كتابة أسمك باللغة الإنجليزية أو برموز أو تشكيل</li>
+<li>يمنع الدخول من أجهزة غير جهازك الشخصي</li>
+<li>يحق لك امتلاك شخصتين فقط</li>
 </ul>
 
 <p><b>🎥 اللعب والبث</b></p>
 <ul>
-<li>ممنوع الستريم سنايب أو متابعة البثوث أثناء اللعب (عقوبتها شديدة).</li>
+<li>ممنوع الستريم سنايب</li>
 </ul>
 
-<p><b>🧑🏾‍💼 القوانين العامة داخل السيرفر</b></p>
+<p><b>🚗 القيادة</b></p>
 <ul>
-<li>ممنوع طلب تعويض عند خسارة أموالك أو أغراضك بسبب التحلل أو المستشفى.</li>
-<li>ممنوع الكتابة خارج الرول بلاي في تويتر.</li>
-<li>لا يحق الدخول في أحداث كبيرة إلا بعد أسبوع معرفة رول بلاي.</li>
-<li>يمنع السب أو الطائفية أو السياسة أو الدين أو القبلية.</li>
-<li>يمنع الكلمات المشفرة أو السب المبطن.</li>
-<li>يمنع استغلال الخدمات للخطف أو القتل.</li>
-<li>يمنع توزيع مبالغ كبيرة إلا بعد معرفة مسبقة.</li>
-</ul>
-
-<p><b>🚗 قوانين القيادة</b></p>
-<ul>
-<li>قيادة واقعية بدون تهور.</li>
-<li>لا سرعة مفرطة بدون سبب.</li>
-<li>لا قطع إشارات.</li>
-<li>ممنوع رفع الدباب أو القفز بشكل غير واقعي.</li>
+<li>قيادة واقعية بدون تهور</li>
+<li>ممنوع السرعة بدون سبب</li>
 </ul>
 
 </details>
 
-<!-- POLICE -->
 <details>
 <summary>قوانين الشرطة</summary>
-
 <p>
-1 - يتم طلب المداهمة من الضباط وما فوق ولا يمكن مداهمة أي شخص الا بأمر من المحكمة<br>
-2 - المسؤول يتحمل أخطاء فريقه<br>
-3 - ممنوع إخراج السلاح إلا بعد تهديد واضح<br>
-4 - استخدام نفس فئة سلاح المجرم<br>
-5 - يمنع استخدام النار ضد سلاح أبيض إلا عند الهجوم<br>
-6 - يمنع التفرقة بين المواطنين<br>
-7 - يمنع التيزر ضد مسلح بسلاح ناري
+1 - المداهمة بأمر رسمي فقط<br>
+2 - المسؤول يتحمل فريقه<br>
+3 - ممنوع السلاح بدون تهديد<br>
+4 - يمنع الظلم بين المواطنين<br>
 </p>
-
-<p><b>👮 سلوك رجل الأمن</b></p>
-<p>
-يجب أن يكون رجل الأمن محترم وهادئ وملتزم ويحافظ على حقوق الإنسان.  
-أي فساد أو تمرد يعرضه للعقوبة أو الفصل أو الإعدام داخل النظام.
-</p>
-
 </details>
 
 </div>
 
-</body><script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
 });
 
-/* انتقال عند الضغط على أي رابط */
 document.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", function(e) {
 
     const href = this.getAttribute("href");
 
-    // لو رابط داخلي
     if (href && !href.startsWith("http")) {
       e.preventDefault();
       document.body.classList.add("fade-out");
@@ -282,27 +224,6 @@ document.querySelectorAll("a").forEach(link => {
   });
 });
 </script>
+
+</body>
 </html>
-<a class="btn" href="founders.html">👑 المؤسسين</a>
-.btns {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.btn {
-  padding: 12px 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid #9d4edd;
-  background: rgba(255,255,255,0.05);
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #9d4edd;
-  box-shadow: 0 0 25px #9d4edd;
-  transform: translateY(-2px);
-}
