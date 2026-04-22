@@ -2,41 +2,65 @@ body {
   margin: 0;
   font-family: Arial;
   color: white;
-  text-align: center;
-  background: radial-gradient(circle at top, #2b0a3d, #0b0b0f);
+  background: #0b0b0f;
 }
 
-/* عنوان الموقع */
-h1 {
+/* الهيدر */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #120a1a;
+  border-bottom: 1px solid #2b0a3d;
+}
+
+.logo {
+  font-size: 22px;
   color: #c77dff;
-  text-shadow: 0 0 15px #9d4edd;
+  font-weight: bold;
 }
 
-/* كروت */
-.card {
-  width: 320px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(199,125,255,0.4);
-  box-shadow: 0 0 25px rgba(157,78,221,0.3);
-  backdrop-filter: blur(10px);
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
 }
 
-/* أزرار */
-a {
-  display: inline-block;
-  margin: 10px;
+nav a:hover {
+  background: #9d4edd;
+}
+
+/* الهيرو */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 70px;
+  color: #c77dff;
+  text-shadow: 0 0 20px #9d4edd;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+.btn {
+  margin-top: 20px;
   padding: 12px 25px;
-  border-radius: 12px;
+  background: #9d4edd;
+  border-radius: 10px;
   text-decoration: none;
   color: white;
-  border: 1px solid #9d4edd;
-  transition: 0.3s;
 }
 
-a:hover {
-  background: #9d4edd;
+.btn:hover {
   box-shadow: 0 0 20px #9d4edd;
 }
