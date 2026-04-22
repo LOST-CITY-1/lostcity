@@ -3,26 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <title>Lost City</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  background: black;
+}
+
+/* الحاوية */
+.ui {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* الصورة */
+.ui img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* مناطق الضغط */
+.zone {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* 🔥 عدلناها كنسب بدل إحداثيات */
+.home {
+  top: 5%;
+  left: 40%;
+  width: 20%;
+  height: 10%;
+}
+
+.rules {
+  top: 45%;
+  left: 20%;
+  width: 25%;
+  height: 12%;
+}
+
+.founders {
+  top: 45%;
+  left: 55%;
+  width: 25%;
+  height: 12%;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Lost City</div>
+<div class="ui">
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="rules.html">القوانين</a>
-    <a href="founders.html">المؤسسين</a>
-  </nav>
-</header>
+  <!-- صورتك -->
+  <img src="images.png">
 
-<section class="hero">
-  <h1>Lost City</h1>
-  <p>سيرفر رول بلاي احترافي</p>
-  <a class="btn" href="rules.html">ابدأ الآن</a>
-</section>
+  <!-- مناطق الضغط -->
+  <a href="index.html" class="zone home"></a>
+  <a href="rules.html" class="zone rules"></a>
+  <a href="founders.html" class="zone founders"></a>
+
+</div>
 
 </body>
 </html>
