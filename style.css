@@ -81,3 +81,20 @@ nav a:hover {
 body {
   background: red !important;
 }
+.discord {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+
+  background: #5865F2; /* لون ديسكورد */
+  box-shadow: 0 0 20px rgba(88,101,242,0.5);
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.discord:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(88,101,242,0.8);
+}
