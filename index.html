@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Lost City</title>
+
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url("images.png") no-repeat center center fixed;
-  background-size: cover;
+  background: #111;
   color: white;
   text-align: center;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.6);
+.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,43 +23,46 @@ body {
 
 h1 {
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
+  color: #aaa;
 }
 
-.buttons a {
-  display: inline-block;
+.btn {
+  display: block;
+  width: 200px;
   margin: 10px;
-  padding: 12px 25px;
-  background: #ffffff20;
-  border: 1px solid white;
+  padding: 12px;
+  background: #222;
+  border: 1px solid #555;
   color: white;
   text-decoration: none;
   border-radius: 10px;
   transition: 0.3s;
 }
 
-.buttons a:hover {
+.btn:hover {
   background: white;
   color: black;
 }
 </style>
+
 </head>
 
 <body>
-<div class="overlay">
-  <h1>Lost City</h1>
-  <p>مرحباً بك في سيرفرنا</p>
 
-  <div class="buttons">
-    <a href="index.html">الرئيسية</a>
-    <a href="rules.html">القوانين</a>
-    <a href="founders.html">المؤسسين</a>
-  </div>
+<div class="container">
+  <h1>Lost City</h1>
+  <p>مرحباً بك في السيرفر</p>
+
+  <a class="btn" href="index.html">الرئيسية</a>
+  <a class="btn" href="rules.html">القوانين</a>
+  <a class="btn" href="founders.html">المؤسسين</a>
 </div>
+
 </body>
 </html>
