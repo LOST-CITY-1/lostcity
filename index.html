@@ -7,73 +7,42 @@
 <style>
 body {
   margin: 0;
-  background: #000;
-  font-family: Arial;
+  background: black;
 }
-
-/* حاوية الصورة */
-.container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-/* الصورة الأساسية */
-.container img {
+img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
-
-/* أزرار فوق الصورة */
-.btn {
-  position: absolute;
-  padding: 12px 20px;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: white;
-  color: black;
-}
-
-/* مكان الأزرار (عدّلها حسب الصورة عندك) */
-.rules {
-  top: 40%;
-  left: 20%;
-}
-
-.founders {
-  top: 40%;
-  left: 60%;
-}
-
-.home {
-  top: 10%;
-  left: 45%;
-}
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<!-- 🔥 الصورة + مناطق الضغط -->
+<img src="images.png" usemap="#map">
 
-  <!-- 🔥 حط صورتك هنا -->
-  <img src="images.png" alt="design">
+<map name="map">
 
-  <!-- أزرار التنقل فوق الصورة -->
-  <a class="btn home" href="index.html">الرئيسية</a>
-  <a class="btn rules" href="rules.html">القوانين</a>
-  <a class="btn founders" href="founders.html">المؤسسين</a>
+  <!-- القوانين -->
+  <area shape="rect"
+        coords="300,400,600,500"
+        href="rules.html"
+        alt="القوانين">
 
-</div>
+  <!-- المؤسسين -->
+  <area shape="rect"
+        coords="700,400,1000,500"
+        href="founders.html"
+        alt="المؤسسين">
+
+  <!-- الرئيسية -->
+  <area shape="rect"
+        coords="500,100,800,200"
+        href="index.html"
+        alt="الرئيسية">
+
+</map>
 
 </body>
 </html>
