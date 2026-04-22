@@ -2,114 +2,93 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Lost City RP</title>
+<title>Lost City</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial;
-    background: radial-gradient(circle at center, #0f172a, #020617);
-    color: white;
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
+/* طبقة تغميق */
+.overlay {
+  background: rgba(0,0,0,0.7);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-    color: #a855f7;
-    font-weight: bold;
-    font-size: 20px;
+/* العنوان */
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-.nav-links a {
-    color: #ccc;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    color: #a855f7;
-}
-
-.join-btn {
-    background: linear-gradient(45deg, #9333ea, #a855f7);
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    margin-top: 120px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    color: #c084fc;
-}
-
-.hero p {
-    color: #94a3b8;
-}
-
+/* الأزرار */
 .buttons {
-    margin-top: 30px;
+  display: flex;
+  gap: 15px;
 }
 
 .btn {
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-.primary {
-    background: linear-gradient(45deg, #9333ea, #c084fc);
-    color: white;
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00c6ff;
 }
 
-.secondary {
-    border: 1px solid #a855f7;
-    color: #a855f7;
+/* المؤسسين */
+.founders {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+
+.founders h2 {
+  margin-bottom: 5px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 </style>
 
 </head>
+
 <body>
 
-<nav>
-<div class="logo">Lost City</div>
+<div class="overlay">
 
-<div class="nav-links">
-<a href="#">الرئيسية</a>
-<a href="rules.html">القوانين</a>
-</div>
+  <h1>🔥 Lost City 🔥</h1>
 
-<a class="join-btn" href="https://discord.gg/CxpaxTspUF" target="_blank">
-انضم الآن
-</a>
-</nav>
+  <div class="buttons">
+    <a href="rules.html" class="btn">📜 القوانين</a>
+    <a href="#" class="btn">🎮 دخول السيرفر</a>
+  </div>
 
-<div class="hero">
-<h1>Lost City</h1>
-<p>أفضل سيرفر حياة واقعية 🔥</p>
+  <div class="founders">
+    <h2>👑 المؤسسين</h2>
+    <div class="card">
+      ابو جنتل <br>
+      <small>صاحب السيرفر</small>
+    </div>
+  </div>
 
-<div class="buttons">
-<a class="btn primary" href="https://discord.gg/CxpaxTspUF" target="_blank">
-انضم للسيرفر
-</a>
-
-<a class="btn secondary" href="rules.html">
-قراءة القوانين
-</a>
-</div>
 </div>
 
 </body>
