@@ -7,65 +7,92 @@
 <style>
 body {
   margin: 0;
-  background: black;
+  font-family: Arial;
+  background: radial-gradient(circle at top, #2b0a3d, #0b0b0f);
+  color: white;
 }
 
-/* الحاوية */
-.ui {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+/* الهيدر */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #120a1a;
+  border-bottom: 1px solid #3a0a55;
 }
 
-/* الصورة */
-.ui img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.logo {
+  font-size: 22px;
+  color: #c77dff;
+  font-weight: bold;
 }
 
-/* مناطق الضغط */
-.zone {
-  position: absolute;
-  cursor: pointer;
+/* الروابط */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
 
-/* 🔥 عدلناها كنسب بدل إحداثيات */
-.home {
-  top: 5%;
-  left: 40%;
-  width: 20%;
-  height: 10%;
+nav a:hover {
+  background: #9d4edd;
 }
 
-.rules {
-  top: 45%;
-  left: 20%;
-  width: 25%;
-  height: 12%;
+/* منتصف الصفحة */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.founders {
-  top: 45%;
-  left: 55%;
-  width: 25%;
-  height: 12%;
+.hero h1 {
+  font-size: 70px;
+  color: #c77dff;
+  text-shadow: 0 0 20px #9d4edd;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+/* زر */
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #9d4edd;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px #9d4edd;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="ui">
+<header>
+  <div class="logo">Lost City</div>
 
-  <!-- صورتك -->
-  <img src="images.png">
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="rules.html">القوانين</a>
+    <a href="founders.html">المؤسسين</a>
+  </nav>
+</header>
 
-  <!-- مناطق الضغط -->
-  <a href="index.html" class="zone home"></a>
-  <a href="rules.html" class="zone rules"></a>
-  <a href="founders.html" class="zone founders"></a>
-
+<div class="hero">
+  <h1>Lost City</h1>
+  <p>سيرفر رول بلاي احترافي</p>
+  <a class="btn" href="rules.html">دخول</a>
 </div>
 
 </body>
