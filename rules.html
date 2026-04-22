@@ -284,3 +284,25 @@ document.querySelectorAll("a").forEach(link => {
 </script>
 </html>
 <a class="btn" href="founders.html">👑 المؤسسين</a>
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #9d4edd;
+  background: rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #9d4edd;
+  box-shadow: 0 0 25px #9d4edd;
+  transform: translateY(-2px);
+}
