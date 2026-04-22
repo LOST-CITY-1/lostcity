@@ -8,50 +8,48 @@
 body {
   margin: 0;
   font-family: Arial;
-  color: white;
   background: url('bg.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-/* تغبيش + فخامة */
+/* طبقة فخمة */
 .overlay {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+  background: rgba(0,0,0,0.75);
   height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* شعار */
-.logo {
-  width: 140px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 15px purple);
-}
-
 /* العنوان */
 h1 {
-  font-size: 55px;
-  margin-bottom: 25px;
-  text-shadow: 0 0 20px #6a00ff;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px purple;
 }
 
 /* الأزرار */
-.buttons {
+.menu {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  width: 250px;
 }
 
 .btn {
-  background: linear-gradient(45deg, #6a00ff, #00c6ff);
-  padding: 15px 35px;
-  border-radius: 15px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
   text-decoration: none;
   color: white;
   font-size: 20px;
-  transition: 0.3s;
+
+  background: linear-gradient(45deg, #6a00ff, #00c6ff);
   box-shadow: 0 0 15px #6a00ff;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -66,11 +64,9 @@ h1 {
 
 <div class="overlay">
 
-  <img src="logo.png" class="logo">
-
   <h1>Lost City</h1>
 
-  <div class="buttons">
+  <div class="menu">
     <a href="rules.html" class="btn">📜 القوانين</a>
     <a href="founders.html" class="btn">👑 المؤسسين</a>
   </div>
