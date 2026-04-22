@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Lost City</title>
 
-<!-- 🔥 أيقونات صحيحة -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -16,7 +15,26 @@ body {
   overflow: hidden;
 }
 
-/* ضوء بنفسجي */
+/* 🔥 خطوط ضوء متحركة */
+.line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #9d4edd, transparent);
+  opacity: 0.2;
+  animation: move 6s infinite linear;
+}
+
+.line:nth-child(1) { left: 10%; }
+.line:nth-child(2) { left: 30%; animation-delay: 2s; }
+.line:nth-child(3) { left: 70%; animation-delay: 4s; }
+
+@keyframes move {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* glow */
 .glow {
   position: absolute;
   width: 600px;
@@ -24,25 +42,25 @@ body {
   background: #9d4edd;
   filter: blur(200px);
   opacity: 0.25;
-  top: -100px;
-  left: -100px;
+  top: -120px;
+  left: -120px;
 }
 
-/* LC الخلفية */
+/* LC */
 .lc {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 220px;
+  font-size: 230px;
   font-weight: 900;
-  color: rgba(199,125,255,0.12);
-  letter-spacing: 25px;
-  text-shadow: 0 0 80px rgba(157,78,221,0.3);
+  color: rgba(199,125,255,0.10);
+  letter-spacing: 30px;
+  text-shadow: 0 0 90px rgba(157,78,221,0.3);
   pointer-events: none;
 }
 
-/* المدينة */
+/* مدينة */
 .city {
   position: absolute;
   bottom: 0;
@@ -58,14 +76,14 @@ body {
   width: 60px;
   background: linear-gradient(to top, #1a1a1a, #2b0a3d);
   border: 1px solid #3a0a55;
-  box-shadow: 0 0 30px rgba(157,78,221,0.2);
+  box-shadow: 0 0 40px rgba(157,78,221,0.25);
 }
 
 .b1 { height: 120px; }
-.b2 { height: 180px; }
+.b2 { height: 200px; }
 .b3 { height: 90px; }
-.b4 { height: 220px; }
-.b5 { height: 150px; }
+.b4 { height: 240px; }
+.b5 { height: 160px; }
 
 /* المحتوى */
 .content {
@@ -79,20 +97,22 @@ body {
 }
 
 h1 {
-  font-size: 65px;
+  font-size: 70px;
   color: #c77dff;
-  text-shadow: 0 0 25px #9d4edd;
+  text-shadow: 0 0 30px #9d4edd;
   margin: 0;
+  letter-spacing: 2px;
 }
 
 p {
   color: #bbb;
+  margin-top: 5px;
 }
 
 /* أزرار */
 .btns {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -104,12 +124,13 @@ p {
   border: 1px solid #9d4edd;
   background: rgba(255,255,255,0.05);
   transition: 0.3s;
+  backdrop-filter: blur(5px);
 }
 
 .btn:hover {
   background: #9d4edd;
-  box-shadow: 0 0 25px #9d4edd;
-  transform: translateY(-2px);
+  box-shadow: 0 0 30px #9d4edd;
+  transform: translateY(-3px);
 }
 
 /* أيقونات */
@@ -117,11 +138,11 @@ p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   margin: 10px;
-  border-radius: 15px;
-  font-size: 28px;
+  border-radius: 18px;
+  font-size: 30px;
   color: white;
   text-decoration: none;
   transition: 0.3s;
@@ -130,24 +151,24 @@ p {
 /* ديسكورد */
 .discord {
   background: linear-gradient(135deg, #5865F2, #7b83ff);
-  box-shadow: 0 0 25px rgba(88,101,242,0.6);
+  box-shadow: 0 0 30px rgba(88,101,242,0.6);
 }
 
 .discord:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 40px rgba(88,101,242,0.9);
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 50px rgba(88,101,242,0.9);
 }
 
 /* تيك توك */
 .tiktok {
-  background: black;
+  background: linear-gradient(135deg, #000, #1a1a1a);
   border: 1px solid #ff2d55;
-  box-shadow: 0 0 25px rgba(255,45,85,0.4);
+  box-shadow: 0 0 30px rgba(255,45,85,0.4);
 }
 
 .tiktok:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 40px rgba(255,45,85,0.8);
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 0 50px rgba(255,45,85,0.8);
 }
 </style>
 
@@ -155,13 +176,15 @@ p {
 
 <body>
 
-<!-- ضوء -->
 <div class="glow"></div>
 
-<!-- LC -->
+<!-- خطوط حركة -->
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+
 <div class="lc">LC</div>
 
-<!-- المدينة -->
 <div class="city">
   <div class="building b1"></div>
   <div class="building b3"></div>
@@ -170,7 +193,6 @@ p {
   <div class="building b4"></div>
 </div>
 
-<!-- المحتوى -->
 <div class="content">
 
   <h1>Lost City</h1>
@@ -181,13 +203,11 @@ p {
     <a class="btn" href="founders.html">المؤسسين</a>
   </div>
 
-  <!-- ديسكورد -->
   <a class="icon-btn discord" href="https://discord.gg/dZSnqcRQCp" target="_blank">
     <i class="fa-brands fa-discord"></i>
   </a>
 
-  <!-- تيك توك -->
-  <a class="icon-btn tiktok" href="https://www.tiktok.com/@lc9721" target="_blank">
+  <a class="icon-btn tiktok" href="https://www.tiktok.com/@.lc9721" target="_blank">
     <i class="fa-brands fa-tiktok"></i>
   </a>
 
