@@ -7,43 +7,65 @@
 <style>
 body {
   margin: 0;
-  background: black;
+  background: #0f0f0f;
+  font-family: Arial;
+  color: white;
 }
-img {
-  display: block;
-  width: 100%;
+
+/* الواجهة */
+.screen {
   height: 100vh;
-  object-fit: contain; /* يخلي الصورة هي كل الصفحة بدون خلفية */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* العنوان */
+.title {
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+/* الروابط (مكان "القوانين" داخل التصميم) */
+.menu {
+  display: flex;
+  gap: 60px;
+  font-size: 25px;
+}
+
+/* نفس شكل UI */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: white;
+  color: black;
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- الصورة هي الموقع كامل -->
-<img src="images.png" usemap="#ui">
+<div class="screen">
 
-<map name="ui">
+  <div class="title">Lost City</div>
 
-  <!-- 🔥 القوانين -->
-  <area shape="rect"
-        coords="350,420,650,520"
-        href="rules.html"
-        alt="القوانين">
+  <div class="menu">
+    <a href="index.html">الرئيسية</a>
+    <a href="rules.html">القوانين</a>
+    <a href="founders.html">المؤسسين</a>
+  </div>
 
-  <!-- 🔥 المؤسسين -->
-  <area shape="rect"
-        coords="700,420,1000,520"
-        href="founders.html"
-        alt="المؤسسين">
-
-  <!-- 🔥 الرئيسية -->
-  <area shape="rect"
-        coords="500,120,800,220"
-        href="index.html"
-        alt="الرئيسية">
-
-</map>
+</div>
 
 </body>
 </html>
