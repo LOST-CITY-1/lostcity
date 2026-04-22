@@ -78,3 +78,6 @@ nav a:hover {
 .btn:hover {
   box-shadow: 0 0 20px #9d4edd;
 }
+body {
+  background: red !important;
+}
