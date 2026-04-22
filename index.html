@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
+<head><style>
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* عند الخروج */
+.fade-out {
+  opacity: 0 !important;
+}
+</style>
 <meta charset="UTF-8">
 <title>Lost City</title>
 
