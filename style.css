@@ -2,6 +2,14 @@ body {
   margin: 0;
   font-family: Arial;
   color: white;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(168,85,247,.25), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(139,92,246,.20), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(192,132,252,.15), transparent 40%),
+    linear-gradient(180deg,#08040f 0%,#12051f 45%,#050308 100%);
+}
 
   /* 🔥 هنا الصورة اللي تبيها */
   background: url("images.png") no-repeat center center fixed;
