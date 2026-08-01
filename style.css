@@ -98,3 +98,26 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(88,101,242,0.8);
 }
+.logo-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    opacity: 0.15;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px #a855f7);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% - 15px));
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
